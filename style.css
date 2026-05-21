@@ -1,0 +1,151 @@
+/* --- Global Resets & Fonts --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0f11;
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* --- Container Layout --- */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+  padding: 20px;
+}
+
+.brand {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #707075;
+  align-self: flex-start;
+  padding-left: 4px;
+}
+
+.brand span {
+  color: #ff3e3e; /* Highlights the 'CODE' part */
+}
+
+/* --- Calculator Body --- */
+.calc {
+  background-color: #16161a;
+  border: 2px solid #26262b;
+  border-radius: 24px;
+  padding: 24px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Display System --- */
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 90px;
+  margin-bottom: 24px;
+  padding: 0 8px;
+  word-break: break-all;
+  text-align: right;
+}
+
+.expression {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.9rem;
+  color: #707075;
+  min-height: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.result {
+  font-family: 'DM Mono', monospace;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* --- Button Grid Layout --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* --- Button Styling Base --- */
+.btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background-color: #212127;
+  color: #ffffff;
+  aspect-ratio: 1; /* Makes buttons perfectly square */
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #2c2c35;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* --- Special Button Modifiers --- */
+.span2 {
+  grid-column: span 2;
+  aspect-ratio: auto; /* Allow elongation for the 0 key */
+  height: 100%;
+}
+
+.btn.fn {
+  background-color: #2a2a35;
+  color: #a5a5b5;
+}
+.btn.fn:hover {
+  background-color: #353544;
+}
+
+.btn.op {
+  background-color: #2e2518;
+  color: #ff9f0a;
+}
+.btn.op:hover {
+  background-color: #3e3220;
+}
+
+.btn.eq {
+  background-color: #ff9f0a;
+  color: #000000;
+}
+.btn.eq:hover {
+  background-color: #ffb340;
+}
+
+/* --- Bottom Hint Text --- */
+.hint {
+  font-size: 0.75rem;
+  color: #4a4a50;
+}

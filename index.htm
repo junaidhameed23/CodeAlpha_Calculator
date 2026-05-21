@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator — CodeAlpha</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="brand">
+    <span>CODE</span>ALPHA — Calculator
+  </div>
+
+  <div class="calc">
+
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result">0</div>
+    </div>
+
+    <div class="grid">
+
+      <button class="btn fn" data-action="clear">AC</button>
+      <button class="btn fn" data-action="sign">+/−</button>
+      <button class="btn fn" data-action="percent">%</button>
+      <button class="btn op" data-op="÷">÷</button>
+
+      <button class="btn" data-num="7">7</button>
+      <button class="btn" data-num="8">8</button>
+      <button class="btn" data-num="9">9</button>
+      <button class="btn op" data-op="×">×</button>
+
+      <button class="btn" data-num="4">4</button>
+      <button class="btn" data-num="5">5</button>
+      <button class="btn" data-num="6">6</button>
+      <button class="btn op" data-op="−">−</button>
+
+      <button class="btn" data-num="1">1</button>
+      <button class="btn" data-num="2">2</button>
+      <button class="btn" data-num="3">3</button>
+      <button class="btn op" data-op="+">+</button>
+
+      <button class="btn span2" data-num="0">0</button>
+      <button class="btn" data-action="decimal">.</button>
+      <button class="btn eq" data-action="equals">=</button>
+
+    </div>
+  </div>
+
+  <div class="hint">
+    Keyboard supported · ESC to clear
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
